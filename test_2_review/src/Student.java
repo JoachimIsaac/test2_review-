@@ -10,7 +10,7 @@ public class Student extends Person {
         super(name,age);
     }
 
-    //Child copy constructor , with super. 
+    //Child copy constructor , with super.
     Student(Person person){
         super(person);
     }

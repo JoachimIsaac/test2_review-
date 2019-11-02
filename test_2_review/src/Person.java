@@ -21,7 +21,7 @@ public class Person implements Person_Interface{
 
         for(int i = 0; i < 10; i++){
             //Create a new instance of the student subclass
-            Student student = new Student("Joe",i);
+            Student student = new Student("Joe",15+i);
 
             //Add the instance of the student object into the list.
             list1.add(student);
@@ -29,15 +29,22 @@ public class Person implements Person_Interface{
 
         for(int i = 0; i < 10; i++){
             //print the age of each student object in the array.
-            System.out.println("Student "+ i +" Here is my age: "+list1.get(i).get_age());
+            System.out.println("Student "+ i +" My age is: "+list1.get(i).get_age());
+
         }
+
+        //Use of ToString method.
+        Person p = new Student("Joe", 33);
+        System.out.println(p.ToString());
+
+
     }
 
     //member data name
-    private String name = "";
+    public String name = "";
 
     //member data age
-    private int age = 0;
+    public int age = 0;
 
 
     //Default constructor
@@ -78,5 +85,14 @@ public class Person implements Person_Interface{
     public void set_age(int age) {
         this.age = age;
     }
+
+
+   //Tostring method implementation:
+    @Override
+    public String ToString() {
+        return "X=" + name + " " + "Y=" + age;
+    }
+
+
 
 }
