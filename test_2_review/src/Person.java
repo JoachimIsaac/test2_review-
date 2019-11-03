@@ -11,17 +11,18 @@ import java.util.ArrayList;
 // then make it do something.
 
 
-public class Person implements Person_Interface{
+public abstract class Person implements Person_Interface{
 
 
     public static void main(String[] args) {
 
         //Declare the Arraylist that can hold Person class objects.
         ArrayList<Person> list1= new ArrayList<Person>(10);
+        String[] names = new String[]{ "Joe","Micha-lyn","Aquilla","David","Sarah","David","Christian","Joshua","Harry","James"};
 
         for(int i = 0; i < 10; i++){
             //Create a new instance of the student subclass
-            Student student = new Student("Joe",15+i);
+            Student student = new Student(names[i],20+i);
 
             //Add the instance of the student object into the list.
             list1.add(student);
@@ -29,13 +30,13 @@ public class Person implements Person_Interface{
 
         for(int i = 0; i < 10; i++){
             //print the age of each student object in the array.
-            System.out.println("Student "+ i +" My age is: "+list1.get(i).get_age());
+            System.out.println(list1.get(i).ToString());
 
         }
 
-        //Use of ToString method.
-        Person p = new Student("Joe", 33);
-        System.out.println(p.ToString());
+//        //Use of ToString method.
+//        Person p = new Student("Joe", 33);
+//        System.out.println(p.ToString());
 
 
     }
@@ -45,6 +46,9 @@ public class Person implements Person_Interface{
 
     //member data age
     public int age = 0;
+
+    //abstract method.
+    public abstract String convert();
 
 
     //Default constructor
@@ -87,11 +91,11 @@ public class Person implements Person_Interface{
     }
 
 
-   //Tostring method implementation:
-    @Override
-    public String ToString() {
-        return "X=" + name + " " + "Y=" + age;
+    public String ToString(){
+        return convert();
     }
+
+
 
 
 

@@ -15,4 +15,8 @@ public class Student extends Person {
         super(person);
     }
 
+    @Override
+    public String convert() {
+        return "Name: " + name + " " + "Age: " + age;
+    }
 }
