@@ -33,21 +33,17 @@ public abstract class Person implements Person_Interface{
             System.out.println(list1.get(i).ToString());
 
         }
-
-//        //Use of ToString method.
-//        Person p = new Student("Joe", 33);
-//        System.out.println(p.ToString());
-
-
     }
 
-    //member data name
+
+
+    //Member data name
     public String name = "";
 
-    //member data age
+    //Member data age
     public int age = 0;
 
-    //abstract method.
+    //Abstract method.
     public abstract String convert();
 
 
@@ -63,12 +59,10 @@ public abstract class Person implements Person_Interface{
         this.age = age;
    }
 
-   //copy constructor
+   //Copy constructor
     public Person(Person person){
         this.name = person.name;
     }
-
-
 
     @Override
     public int get_age() {
@@ -89,7 +83,6 @@ public abstract class Person implements Person_Interface{
     public void set_age(int age) {
         this.age = age;
     }
-
 
     public String ToString(){
         return convert();
